@@ -3,16 +3,11 @@ function sumOfNumbers(num) {
   var digits = num.toString().split('').map(function(item, index) {
     return parseInt(item);
   });
+  return digits.reduce((a, b) => a + b, 0); 
 
-  return digits;
 };
 
-it('should split the numbers up', () => {
-  const sumOfNumbersFunc = sumOfNumbers(123);
-  expect(sumOfNumbersFunc).toEqual([1,2,3]);
-});
-
 it('should add the numbers up', () => {
-  const sumOfNumbersFunc = sumOfNumbers(123);
-  expect(sumOfNumbersFunc).toEqual(6);
+  const sumOfNumbersFunc = sumOfNumbers(126);
+  expect(sumOfNumbersFunc).toEqual(9);
 });
