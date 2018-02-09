@@ -11,3 +11,8 @@ it('should add the numbers up', () => {
   const sumOfNumbersFunc = sumOfNumbers(126);
   expect(sumOfNumbersFunc).toEqual(9);
 });
+
+it('should ignore the number 9', () => {
+  const sumOfNumbersFunc = sumOfNumbers(229);
+  expect(sumOfNumbersFunc).toEqual(4);
+});
