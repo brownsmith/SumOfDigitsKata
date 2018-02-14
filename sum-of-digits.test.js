@@ -3,6 +3,7 @@ function sumOfNumbers(num) {
   var digits = num.toString().split('').map(function(item, index) {
     return parseInt(item == 9 ? 0 : item);
   });
+
   return digits.reduce((a, b) => a + b, 0); 
 
 };
